@@ -18,3 +18,10 @@ request.onload = function() {
 request.send();
 
 const app = document.getElementById('root');
+console.log(app);
+
+const logo = document.createElement('img');
+logo.src = 'logo.png';
+
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
