@@ -6,9 +6,15 @@ request.onload = function() {
   //Access JSON data here
   var movieData = JSON.parse(this.response);
 
-  movieData.forEach(movie => {
-    console.log(movie.title);
-  });
+  if (request.status >= 200 && request.status < 400) {
+    movieData.forEach(movie => {
+      console.log(movie.title);
+    });
+  } else {
+    console.log('error');
+  }
 }
 
 request.send();
+
+const app = document.getElementById('root');
